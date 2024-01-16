@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Contact Us</title>
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/68b8e2c75e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+	<section class="sub-Header-contact">
+		<nav>
+			<a href="index.html"><img src="Images/newlogo.png" alt="Duino_tutor"></a>
+			<div class="nav-links" id="NavLinks">
+				<i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="About.html">About Us</a></li>
+					<li><a href="Contact.html" class="active">Contact Us</a></li>
+					<li><a href="HelpCenter.html">Help Center</a></li>
+				</ul>
+			</div>
+			<i class="fa-solid fa-bars" onclick="showMenu()"></i>
+		</nav>
+	</section>
+
+	<section>
+		<div class="text-box">
+			<h1>Contact Us</h1>
+			<p>Contact us whenever you need from wherever you are! You can find us on instagram, facebook, you-tube, and on discord</p>
+			<br>
+		</div>
+	</section>
+
+	 <!-----------------------Footer------------------------------->
+	<section class="contactus">
+		<div class="comment-box">
+			<h1>Fill out this form to get in touch with us!</h1>
+
+			<form class="comment-form">
+				<input type="text" name="Name" placeholder="Enter Name" required="required">
+				<input type="email" name="Email" placeholder="example@gmail.com" required="required">
+				<textarea rows="5" placeholder="Type here... " required="required"></textarea>
+				<button type="submit" class="submition-btn">Post Submission</button>
+			</form>
+		</div>
+	</section>
+
+	<section class="Offers">
+		<h1>COME MEET US!</h1>
+	<p>This is our location if you need one-on-one help with something or join the team</p>
+		<br>
+		<br>
+	</section>
+
+	<section class="Horizontal-ruler">
+		<hr>
+	</section>
+
+	<section class="location-map">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253498.34635344034!2d79.54650519453126!3d6.9011676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2595e2df87733%3A0x843649180f61bbff!2sNawaloka%20College%20of%20Higher%20Studies%20-%20NCHS!5e0!3m2!1sen!2slk!4v1682578031707!5m2!1sen!2slk" 
+		 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+	</section>
+
+	<section class="Horizontal-ruler">
+		<hr>
+	</section>
+
+    <!-----------------------Footer------------------------------->
+      <section class="footer">
+      	<h4>Find Us On</h4>
+      	<div class="icons">
+			<ul>
+				<li><a href="https://www.facebook.com/profile.php?id=100091544865629&mibextid=LQQJ4d"><img src="icons/fb.png" alt="fb"></a> <a href="https://youtube.com/@DuinoTutor"><img src="icons/yt.png" alt="yt"></a> <a href="https://discord.gg/J9yg9XQA"> <img src="icons/discord.png" alt="dis"></a> <a href="https://instagram.com/duinotutor?igshid=YmMyMTA2M2Y="><img src="icons/insta.png" alt="ins"></a></li>
+		  </ul>
+		</div>
+      	<p>Made by &copy; the Gen Z</p>
+		  <p>Tutor - <a href="sfathima@swin.edu.au">sfathima@swin.edu.au</a></p>
+      </section>
+</body>
+<script>
+	var navlinks = document.getElementById("NavLinks");
+
+	function callMenu()
+	{
+		navlinks.style.right = "0";
+	}
+
+	function showMenu()
+	{
+		navlinks.style.display = "block";
+		setTimeout(callMenu, 100)
+	}
+
+	function MenuHideTimeOut()
+	{
+		navlinks.style.display = "none";
+	}
+
+	function hideMenu()
+	{
+		setTimeout(MenuHideTimeOut, 600);
+		navlinks.style.right = "-200px";
+	}
+  </script>
+</html>

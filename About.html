@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>AboutUs</title>
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/68b8e2c75e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+	<section class="sub-Header">
+		<nav>
+			<a href="index.html"><img src="Images/newlogo.png" alt="Duino Tutor"></a>
+			<div class="nav-links" id="NavLinks">
+				<i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="About.html" class="active">About Us</a></li>
+					<li><a href="Contact.html">Contact Us</a></li>
+					<li><a href="HelpCenter.html">Help Center</a></li>
+				</ul>
+			</div>
+			<i class="fa-solid fa-bars" onclick="showMenu()"></i>
+		</nav>
+	</section>
+
+	<section>
+		<div class="text-box">
+			<h1>About Us</h1>
+			<p>We are a group of the developers, architects, graphics designers and researchers gathered up to make your life easier when dealing with spring-boot framework</p>
+		</div>
+
+	</section>
+	<!-----------------------About Us------------------------------->
+	<section class="About">
+		<h1>The Awesome people that contributed to make your coding experience easier than ever</h1>
+		<br><br>
+		<div class="row-about">
+				<div class="members-col">
+				<h4>Senithu Perera</h4>
+				<img src="icons/members.png" alt="member">
+				<div>
+					<h2>Developer</h2>
+					<p>I am the front-end and back-end developer of the web site. I make sure that you guys have a good experience while surfing through the content that we have to offer</p>
+					<h3></h3>
+				</div>
+			</div>
+			<div class="members-col">
+				<h4>Lakshan, Ranudi & Hansi</h4>
+				<img src="icons/members.png" alt="member">
+				<div>
+					<h2>Research team</h2>
+					<p>We made sure everything you read or gain through our website, is acknowledgeable and trustworthy for any exam you might take or for other web development purposes</p>
+					<h3></h3>
+				</div>
+			</div>
+		</div>
+		<div class="row-about">
+				<div class="members-col">
+				<h4>Minha Khan & Minuka Methsen</h4>
+				<img src="icons/members.png" alt="member">
+				<div>
+					<h2>Lead Architects</h2>
+					<p> We are the website's architects and our aim is to contribute to the website's development and make it as effective, user-friendly, and visually appealing as possible.</p>
+					<h3></h3>
+				</div>
+			</div>
+			<div class="members-col">
+				<h4>Mahesh Chathuranga</h4>
+				<img src="icons/members.png" alt="member">
+				<div>
+					<h2>Graphics designer</h2>
+					<p>I made the icon pack to for our website and I will be handling the graphics in the website in any future development</p>
+					<h3></h3>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="Horizontal-ruler">
+		<hr>
+	</section>
+
+    <!-----------------------Footer------------------------------->
+      <section class="footer">
+      	<h4>Find Us On</h4>
+      	<div class="icons">
+			<ul>
+				<li><a href="https://www.facebook.com/profile.php?id=100091544865629&mibextid=LQQJ4d"><img src="icons/fb.png" alt="fb"></a> <a href="https://youtube.com/@DuinoTutor"><img src="icons/yt.png" alt="yt"></a> <a href="https://discord.gg/J9yg9XQA"> <img src="icons/discord.png" alt="dis"></a> <a href="https://instagram.com/duinotutor?igshid=YmMyMTA2M2Y="><img src="icons/insta.png" alt="ins"></a></li>
+		  </ul>
+		</div>
+      	<p>Made by &copy; the Gen Z</p>
+		  <p>Tutor - <a href="sfathima@swin.edu.au">sfathima@swin.edu.au</a></p>
+      </section>
+
+	  <script>
+		var navlinks = document.getElementById("NavLinks");
+
+		function callMenu()
+		{
+			navlinks.style.right = "0";
+		}
+
+		function showMenu()
+		{
+			navlinks.style.display = "block";
+			setTimeout(callMenu, 100)
+		}
+
+		function MenuHideTimeOut()
+		{
+			navlinks.style.display = "none";
+		}
+
+		function hideMenu()
+		{
+			setTimeout(MenuHideTimeOut, 600);
+			navlinks.style.right = "-200px";
+		}
+	  </script>
+</body>
+</html>
