@@ -13,15 +13,15 @@
 <body>
 
 	<section class="sub-Header-helpcenter">
-		<nav>
-			<a href="index.html"><img src="Images/newlogo.png" alt="TitleLogo"></a>
+		<nav id="nav">
+			<a href="index.html"><img src="Images/newlogo.png" alt="TitleLogo" id="logo"></a>
 			<div class="nav-links" id="NavLinks">
 				<i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
 				<ul>
 					<li><a href="index.html">Home</a></li>
 					<li><a href="About.html">About Us</a></li>
-					<li><a href="Contact.html">Contact Us</a></li>
-					<li><a href="HelpCenter.html" class="active">Help Center</a></li>
+					<li><a href="Contact.html">Work with us</a></li>
+					<li><a href="HelpCenter.html" class="active">Quotes</a></li>
 				</ul>
 			</div>
 			<i class="fa-solid fa-bars" onclick="showMenu()"></i>
@@ -38,22 +38,21 @@
 	 <!-----------------------Footer------------------------------->
 	<section class="contactus">
 		<div class="comment-box">
-			<h1>Submit an issue ticket!</h1>
-			<p>Tell us what is the issue you are having and we will get in touch with you as soon as we can, we will try our best to reply to you on time!</p>
-
+			<h1>Submit a Quote!</h1>
+			
 			<form class="comment-form">
-				<input type="text" name="Name" placeholder="Enter Name" required="required">
-				<input type="text" name="Issue" placeholder="Mail Subject" required="required">
+				<input type="text" name="Name" placeholder="Enter Company Name" required="required">
+				<input type="number" name="number" placeholder="Contact Number" required="required">
 				<select name="rank" id="rank">
-					<option value="7" selected="selected">Select a issue present</option>
-					<option value="6">Configuration issues </option>
-					<option value="5">My spring boot application is slow</option>
-					<option value="4">The current version of dependency is not being used by spring boot application</option>
-					<option value="3">Problems with deployment when spring boot is installed in a production environment</option>
-					<option value="2">My software remains stuck in a "endless loop" when I try to sign in</option>
+					<option value="7" selected="selected">Select a services</option>
+					<option value="6">After-Lease Cleaning</option>
+					<option value="5">Daily Touch-point cleaning</option>
+					<option value="4">Kitchen Deep-Clean</option>
+					<option value="3">General Cleaning</option>
+					<option value="2">Daily Touch-point cleaning</option>
 				</select>
 				<input type="email" name="Email" placeholder="example@gmail.com" required="required">
-				<textarea rows="5" placeholder="Describe your issue here......" required="required"></textarea>
+				<textarea rows="5" placeholder="Extra Details..........." required="required"></textarea>
 				<button type="submit" class="submition-btn">Submit Issue Ticket</button>
 			</form>
 		</div>
@@ -76,6 +75,9 @@
 </body>
 <script>
 	var navlinks = document.getElementById("NavLinks");
+		var nav = document.getElementById("nav");
+		var logo = document.getElementById("logo");
+		var navOffsetTop = nav.offsetTop;
 
 	function callMenu()
 	{
@@ -91,6 +93,11 @@
 	function MenuHideTimeOut()
 	{
 		navlinks.style.display = "none";
+
+		if(window.screen.width > 1113)
+			{
+				navlinks.style.display = "block";
+			}
 	}
 
 	function hideMenu()
@@ -98,5 +105,20 @@
 		setTimeout(MenuHideTimeOut, 600);
 		navlinks.style.right = "-200px";
 	}
+
+	window.addEventListener("scroll", navPosCheck);
+
+		function navPosCheck() {
+
+			if (window.scrollY > 0) {
+				nav.classList.add("transparent-bg");
+				logo.classList.add("color-burn");
+			}
+			else {
+				nav.classList.remove("transparent-bg");
+				logo.classList.remove("color-burn");
+			}
+		}
+
   </script>
 </html>
