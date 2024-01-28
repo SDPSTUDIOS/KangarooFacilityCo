@@ -17,8 +17,11 @@
 <body>
 
 	<section class="sub-Header-contact">
+		<div class="phone-top">
+			<a href="tel:+61434166605">Call us - +61434166605</a>
+		</div>
 		<nav id="nav">
-			<a href="index.html"><img src="Images/newlogo.png" alt="Duino_tutor" id="logo"></a>
+			<a href="index.html"><img src="Images/logo-2.png" alt="Duino_tutor" id="logo"></a>
 			<div class="nav-links" id="NavLinks">
 				<i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
 				<ul>
@@ -30,6 +33,11 @@
 			</div>
 			<i class="fa-solid fa-bars" onclick="showMenu()"></i>
 		</nav>
+
+		<div class="phone">
+			<a href="tel:+61434166605"><img src="icons/call.png" alt="call"></a>
+		</div>
+
 	</section>
 
 	<section>
@@ -44,10 +52,10 @@
 	<section class="contactus">
 		<div class="comment-box">
 			<h1>Fill out this form to get in touch with us!</h1>
-			<form class="comment-form">
+			<form class="comment-form" action="function-handler.php" method="post">
 				<input type="text" name="Name" placeholder="Enter Name" required="required">
 				<input type="email" name="Email" placeholder="example@gmail.com" required="required">
-				<textarea rows="5" placeholder="Type here... " required="required" id="textfilde"></textarea>
+				<textarea rows="5" name="msg" placeholder="Type here... " required="required" id="textfilde"></textarea>
 				<input type="file" name="file" id="file">
 				<br>
 				<br>
@@ -86,17 +94,18 @@
 		<h4>Find Us On</h4>
 		<div class="icons">
 			<ul>
-				<li><a href="https://www.facebook.com/profile.php?id=100091544865629&mibextid=LQQJ4d"><img
-							src="icons/fb.png" alt="fb"></a> <a href="https://youtube.com/@DuinoTutor"><img
-							src="icons/yt.png" alt="yt"></a> <a href="https://discord.gg/J9yg9XQA"> <img
-							src="icons/discord.png" alt="dis"></a> <a
-						href="https://instagram.com/duinotutor?igshid=YmMyMTA2M2Y="><img src="icons/insta.png"
-							alt="ins"></a></li>
+				<li><a href="#"><img src="icons/fb.png" alt="fb"></a> <a href="#">
+					<img src="icons/yt.png" alt="yt"></a> <a href="#"> 
+					<img src="icons/discord.png" alt="dis"></a> <a href="#">
+					<img src="icons/insta.png" alt="ins"></a></li></li>
 			</ul>
 		</div>
 		<p>&copy; Kangaroo Facility Co. 2024</p>
 	</section>
 </body>
+<php?>
+
+</php>
 <script>
 	var navlinks = document.getElementById("NavLinks");
 	var nav = document.getElementById("nav");
